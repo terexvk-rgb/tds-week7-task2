@@ -148,14 +148,3 @@ Questions?
 Contact us at 23f2002999@ds.study.iitm.ac.in
 
 
-### How to View the Presentation Correctly
-
-The "wrong" appearance is likely because you are viewing the raw Markdown text. To see it as a presentation, you need to use a Marp renderer. The easiest way is with the VS Code extension.
-
-1.  **Install the Extension**: Make sure you have the **Marp for VS Code** extension installed in Visual Studio Code.
-2.  **Paste the Code**: Paste the corrected code above into your `slides.md` file.
-3.  **Click the Preview Icon**: In the top-right corner of your VS Code editor window, you will see a small icon of a slide with a magnifying glass. Click it.
-
-![Marp Preview Icon in VS Code](https://i.imgur.com/39a62Gk.png)
-
-This will open a live preview panel showing you exactly how your slides will look. The raw Markdown file itself will always loo
