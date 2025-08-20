@@ -1,13 +1,16 @@
 ---
-
 marp: true
 theme: my-theme
 paginate: true
-footer: "[23f2002999@ds.study.iitm.ac.in](mailto:23f2002999@ds.study.iitm.ac.in)"
----------------------------------------------------------------------------------
+footer: "23f2002999@ds.study.iitm.ac.in"
+---
+
+<!--
+_class: lead
+paginate: true
+-->
 
 <!-- theme specification -->
-
 <style>
 /* @theme my-theme */
 section {
@@ -38,16 +41,16 @@ footer {
 
 **A Maintainable Approach with Marp**
 
-[23f2002999@ds.study.iitm.ac.in](mailto:23f2002999@ds.study.iitm.ac.in)
+23f2002999@ds.study.iitm.ac.in
 
 ---
 
 # Why Marp?
 
-* Markdown-based → Easy version control (Git)
-* Convertible → HTML, PDF, PPTX
-* Customizable themes and styles
-* Great for technical documentation
+- Markdown-based → Easy version control (Git)
+- Convertible → HTML, PDF, PPTX
+- Customizable themes and styles
+- Great for technical documentation
 
 ---
 
@@ -55,9 +58,9 @@ footer {
 
 This presentation uses a **custom Marp theme** defined with CSS.
 
-* Custom colors and typography
-* Page numbers included
-* Footer with email address
+- Custom colors and typography  
+- Page numbers included  
+- Footer with email address  
 
 ---
 
@@ -75,26 +78,26 @@ Text is still visible over the background.
 
 We can include LaTeX-style math equations:
 
-* Algorithmic complexity example:
+- Algorithmic complexity example:
 
-$O(n \log n)$
+$$ O(n \\log n) $$
 
-* Probability example:
+- Probability example:
 
-$P(E) = \frac{|E|}{|\Omega|}$
+$$ P(E) = \\frac{|E|}{|\\Omega|} $$
 
 ---
 
 # Summary
 
-✅ Version-controlled Markdown
-✅ Custom Theme + Styles
-✅ Background Images
-✅ Page Numbers + Footer
-✅ Math Equations
+✅ Version-controlled Markdown  
+✅ Custom Theme + Styles  
+✅ Background Images  
+✅ Page Numbers + Footer  
+✅ Math Equations  
 
 ---
 
 # Thank You!
 
-📧 [23f2002999@ds.study.iitm.ac.in](mailto:23f2002999@ds.study.iitm.ac.in)
+📧 23f2002999@ds.study.iitm.ac.in
