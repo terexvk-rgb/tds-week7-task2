@@ -1,100 +1,136 @@
 ---
 
 marp: true
-theme: my-theme
+math: katex
 paginate: true
+theme: product-docs
 footer: "[23f2002999@ds.study.iitm.ac.in](mailto:23f2002999@ds.study.iitm.ac.in)"
 ---------------------------------------------------------------------------------
 
-<!-- theme specification -->
+<!--
+_class: lead
+-->
 
 <style>
-/* @theme my-theme */
+/* @theme product-docs */
 section {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fdfdfd;
-  color: #222;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, "Noto Sans", "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background: #ffffff;
+  color: #111827;
+  padding: 64px;
 }
 
-section h1 {
-  color: #1a73e8;
-  font-weight: bold;
-  text-align: center;
+h1, h2, h3 { line-height: 1.15; }
+
+/* Page numbers */
+section::after {
+  content: attr(data-marpit-pagination) " / " attr(data-marpit-pagination-total);
+  position: absolute;
+  right: 28px;
+  bottom: 20px;
+  font-size: 0.8rem;
+  opacity: 0.6;
 }
 
-section h2 {
-  color: #444;
-}
+footer { font-size: 12px; color: #6b7280; }
 
-footer {
-  font-size: 12px;
-  color: #666;
-}
+/* Accent */
+:root { --brand: #2563eb; }
+h1 { color: var(--brand); }
+a { color: var(--brand); }
+
+/* Lead slide tweak */
+.lead h1 { font-size: 2.8rem; }
 </style>
 
 ---
 
 # Product Documentation
 
-**A Maintainable Approach with Marp**
+**Maintainable Marp-based slides in version control**
 
-[23f2002999@ds.study.iitm.ac.in](mailto:23f2002999@ds.study.iitm.ac.in)
+📧 [23f2002999@ds.study.iitm.ac.in](mailto:23f2002999@ds.study.iitm.ac.in)
 
 ---
+
+<!-- _class: lead -->
 
 # Why Marp?
 
-* Markdown-based → Easy version control (Git)
-* Convertible → HTML, PDF, PPTX
-* Customizable themes and styles
-* Great for technical documentation
+* Plain **Markdown** ⇒ perfect for Git
+* Converts to **HTML / PDF / PPTX** (via Marp CLI)
+* **Custom themes** with CSS (embedded or external)
+* Slide-level **directives** for per-slide styling
 
 ---
 
-# Custom Styling
+# Custom Styling via Directives
 
-This presentation uses a **custom Marp theme** defined with CSS.
+This deck uses:
 
-* Custom colors and typography
-* Page numbers included
-* Footer with email address
-
----
-
-# Background Image Example
-
-![bg](https://picsum.photos/1200/800)
-
-## Slide with Background Image
-
-Text is still visible over the background.
+* Front‑matter directives: `marp`, `theme`, `paginate`, `math`, `footer`
+* Slide directive: `<!-- _class: lead -->`
+* Theme block with `/* @theme product-docs */` inside `<style>`
+* CSS to render **page numbers** (`section::after`)
 
 ---
 
-# Mathematical Equations
+# Background Image (with overlay text)
 
-We can include LaTeX-style math equations:
+![bg](https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80\&w=1920)
 
-* Algorithmic complexity example:
+<!-- _color: #ffffff -->
 
-$O(n \log n)$
+## Telemetry Pipeline (Example)
 
-* Probability example:
+* Collect → Validate → Ingest → Store
+* Visualize in Grafana / build alerts
 
-$P(E) = \frac{|E|}{|\Omega|}$
+---
+
+# Algorithmic Complexity (Math)
+
+With KaTeX enabled via `math: katex`:
+
+* Sorting complexity: \$T(n) = O(n \log n)\$
+* Hash operations (avg.): \$O(1)\$
+
+Block formula for amortized resize in dynamic arrays:
+
+$$
+T(n) = \frac{1}{n}\sum_{i=1}^{n} c_i = O(1)
+$$
+
+Average Precision in IR:
+
+$$
+\mathrm{AP} = \frac{1}{N}\sum_{k=1}^{N} \mathrm{precision}(k)\,\cdot\,\mathrm{rel}(k)
+$$
+
+---
+
+# Conversion
+
+```bash
+# PDF
+npx @marp-team/marp-cli@latest slides.md --html --allow-local-files -o slides.pdf
+
+# PPTX
+npx @marp-team/marp-cli@latest slides.md --html --allow-local-files -o slides.pptx
+```
 
 ---
 
 # Summary
 
-✅ Version-controlled Markdown
-✅ Custom Theme + Styles
-✅ Background Images
-✅ Page Numbers + Footer
-✅ Math Equations
+* ✅ Version-controlled Markdown
+* ✅ Custom theme + page numbers
+* ✅ Background image slide
+* ✅ Slide-level directives
+* ✅ Math (KaTeX)
 
 ---
 
-# Thank You!
+# Thank You
 
-📧 [23f2002999@ds.study.iitm.ac.in](mailto:23f2002999@ds.study.iitm.ac.in)
+Questions? 📧 [23f2002999@ds.study.iitm.ac.in](mailto:23f2002999@ds.study.iitm.ac.in)
